@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="navbar" th:fragment="navbar">
+	<a th:href="@{/}">Accueil</a>
+	<div class="dropdown">
+		<button class="dropbtn">Contacts &#9662;</button>
+		<div class="dropdown-content">
+			<a th:href="@{/contacts}">Liste des contacts</a>
+			<a th:href="@{/ajout}">Ajouter un contact</a>
+			<a th:href="@{/delete}">Supprimer un contact</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Personnes &#9662;</button>
+		<div class="dropdown-content">
+			<a th:href="@{/personnes}">Liste des personnes</a>
+			<a th:href="@{/ajoutPersonne}">Ajouter une personne</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">Recherches &#9662;</button>
+		<div class="dropdown-content">
+			<a th:href="@{/malNotes}">Contacts mal not&eacute;s</a>
+			<a th:href="@{/recherche}">Rechercher par note</a>
+			<a th:href="@{/proprietaire}">Propri&eacute;taire d'un contact</a>
+			<a th:href="@{/sansContact}">Personnes sans contact</a>
+			<a th:href="@{/meilleureMoyenne}">Meilleure moyenne</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Spring MVC Example</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<h1>Modifier une personne</h1>
+<form th:action="@{/updatePersonne}" method="post">
+<input type="hidden" name="id" th:value="${personne.id}">
+<input type="text" name="nom" th:value="${personne.nom}">
+<input type="text" name="prenom" th:value="${personne.prenom}">
+<input type="text" name="adresse" th:value="${personne.adresse}">
+<input type="submit" value="Envoyer">
+</form>
+</body>
+</html>

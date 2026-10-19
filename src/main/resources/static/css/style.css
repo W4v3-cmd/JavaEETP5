@@ -1,0 +1,135 @@
+/* ---------- page ---------- */
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fff8e7;
+	color: #333;
+}
+
+h1 {
+	color: #d35400;
+	text-align: center;
+	margin-top: 30px;
+}
+
+p {
+	text-align: center;
+	color: #c0392b;
+	font-weight: bold;
+}
+
+/* ---------- barre de menu ---------- */
+.navbar {
+	background-color: #e67e22;
+	overflow: hidden;
+}
+.navbar a, .dropbtn {
+	float: left;
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 16px;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #d35400;
+}
+
+.dropdown {
+	float: left;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	border-radius: 0 0 6px 6px;
+}
+.dropdown-content a {
+	float: none;
+	display: block;
+	color: #333;
+}
+.dropdown-content a:hover {
+	background-color: #ffeaa7;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* ---------- tableaux ---------- */
+table {
+	border-collapse: collapse;
+	border: none;
+	margin: 20px auto;
+	background-color: white;
+	box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+	min-width: 500px;
+}
+th {
+	background-color: #f39c12;
+	color: white;
+	padding: 12px;
+	border: 1px solid #f39c12;
+}
+td {
+	padding: 10px;
+	border: 1px solid #f5deb3;
+	text-align: center;
+}
+tr:nth-child(even) {
+	background-color: #fffbea;
+}
+tr:hover {
+	background-color: #ffeaa7;
+}
+
+/* liens Modifier / Supprimer dans les tableaux */
+td a {
+	color: #e67e22;
+	text-decoration: none;
+	font-weight: bold;
+}
+td a:hover {
+	text-decoration: underline;
+}
+
+/* ---------- formulaires ---------- */
+form {
+	width: 400px;
+	margin: 30px auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+input[type="text"], select {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-bottom: 12px;
+	border: 1px solid #f5c26b;
+	border-radius: 4px;
+	font-size: 15px;
+}
+input[readonly] {
+	background-color: #eee;
+	color: #777;
+}
+input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #f39c12;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: #e67e22;
+}

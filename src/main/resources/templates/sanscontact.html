@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Spring MVC Example</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+   <h1>Personnes sans contact</h1>
+	<table border="2">
+	<tr>
+	<th>Id</th>
+	<th>Nom</th>
+	<th>Prenom</th>
+	<th>Adresse</th>
+	</tr>
+	<tr th:each="p: ${personnes}">
+	<td th:text="${p.id}" />
+	<td th:text="${p.nom}" />
+	<td th:text="${p.prenom}" />
+	<td th:text="${p.adresse}" />
+</tr>
+
+	</table>
+</body>
+</html>

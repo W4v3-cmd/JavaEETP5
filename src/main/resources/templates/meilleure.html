@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Spring MVC Example</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+   <h1>Personne avec la meilleure moyenne</h1>
+<div th:if="${personne != null}">
+	<table border="2">
+	<tr>
+	<th>Id</th>
+	<th>Nom</th>
+	<th>Prenom</th>
+	<th>Adresse</th>
+	<th>Moyenne</th>
+	</tr>
+	<tr>
+	<td th:text="${personne.id}" />
+	<td th:text="${personne.nom}" />
+	<td th:text="${personne.prenom}" />
+	<td th:text="${personne.adresse}" />
+	<td th:text="${personne.moyenne}" />
+	</tr>
+	</table>
+</div>
+</body>
+</html>

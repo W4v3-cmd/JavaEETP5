@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Spring MVC Example</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<h1>Modifier un contact</h1>
+<form th:action="@{/updateContact}" method="post">
+<input type="text" name="email" th:value="${contact.email}" readonly>
+<input type="text" name="note" th:value="${contact.note}">
+<select name="personneId">
+	<option th:each="p : ${personnes}" th:value="${p.id}" th:text="${p.prenom + ' ' + p.nom}"
+		th:selected="${p.id == contact.personne.id}"></option>
+</select>
+<input type="submit" value="Envoyer">
+</form>
+</body>
+</html>

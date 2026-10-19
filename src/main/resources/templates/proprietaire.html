@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Spring MVC Example</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+   <h1>Personne qui possede un contact</h1>
+<form th:action="@{/proprietaire}" method="get">
+<input type="text" placeholder="Email du contact" name="email">
+<input type="submit" value="Rechercher">
+</form>
+<p th:text="${erreur}"></p>
+<div th:if="${personne != null}">
+	<table border="2">
+	<tr>
+	<th>Id</th>
+	<th>Nom</th>
+	<th>Prenom</th>
+	<th>Adresse</th>
+	</tr>
+	<tr>
+	<td th:text="${personne.id}" />
+	<td th:text="${personne.nom}" />
+	<td th:text="${personne.prenom}" />
+	<td th:text="${personne.adresse}" />
+	</tr>
+	</table>
+</div>
+</body>
+</html>
